@@ -58,7 +58,7 @@ function taskCompleted () {
 }
 
 while (true) {
-    console.log('\n Welcome to your task manager, please choose an option:');
+    console.log('Welcome to your task manager, please choose an option:');
     console.log('1. Add a new task');
     console.log('2. Delete a task');
     console.log('3. Mark as a completed task')
