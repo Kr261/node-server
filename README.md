@@ -1,23 +1,14 @@
-# TASK LIST
+1. **¿Qué sucedió al usar `async` y `await`?**
 
-Este script permite crear y administrar una lista de tareas. Cada tarea está compuesta por un indicador, una descripción y un estado que indica si ha sido completada o no.
+   Al usar `async` y `await`, el programa puede esperar a que una función asíncrona se complete antes de continuar con la siguiente línea de código. Esto permite que el programa se ejecute de forma secuencial y más fácil de leer, ya que no es necesario encadenar múltiples llamadas al método `then()`.
 
+2. **¿Qué sucedió al usar el método `then()`?**
 
-Para utilizar el script, puedes ejecutarlo desde la consola y seleccionar la función que deseas utilizar. Se utiliza la librería `readline` para recibir las instrucciones del usuario de manera interactiva. De esta manera permite:
+   Al utilizar el método `then()`, podemos encadenar las promesas y definir las acciones a realizar cuando una promesa se resuelve o se rechaza. Esto nos permite controlar el flujo de ejecución y manejar los resultados de las promesas de manera más flexible.
 
-- **Añadir una nueva tarea a la lista**; proporcionando un indicador único, una descripción de la tarea y su estado inicial.
-- **Eliminar una tarea existente**; especificando el indicador de la tarea que desea eliminar. 
+3. **¿Qué diferencias encontraste entre `async`, `await` y el método `then()`?**
 
-- **Marcar una tarea como completada**; mediante el indicador de la tarea que deseas marcar como completada.
-
-# Task List Script
-
-This script allows you to create and manage a task list. Each task is composed of an indicator, a description, and a status indicating whether it has been completed or not.
-
-To use the script, you can execute it from the console and select the function you want to use. It uses the `readline` library to receive user instructions interactively. This script enables you to:
-
-- **Add a new task to the list**: Provide a unique indicator, a description of the task, and its initial status.
-- **Delete an existing task**: Specify the indicator of the task you want to delete.
-- **Mark a task as completed**: Use the indicator of the task you wish to mark as completed.
-
-The goal of this script is to facilitate task management, allowing you to organize, modify, and track their status. Start using it now and keep your task list organized and up to date!
+   - `async` y `await` permiten escribir código asíncrono de manera síncrona, lo que facilita la legibilidad y el manejo de errores. Al utilizar `await`, el programa espera a que una función asíncrona se complete antes de continuar.
+   - El método `then()` se utiliza para encadenar promesas y definir las acciones a realizar cuando una promesa se resuelve o se rechaza. Proporciona una forma más explícita de manejar las promesas y el flujo de ejecución, pero puede resultar en un código más anidado y menos legible en comparación con `async/await`.
+   - `async/await` es más fácil de leer y escribir en comparación con el método `then()`, especialmente cuando hay múltiples promesas que deben manejarse en secuencia. Permite un estilo de programación más similar a la programación síncrona, lo que facilita el entendimiento del código.
+   - El uso de `async/await` también simplifica el manejo de errores, ya que podemos envolver las llamadas a funciones asíncronas con un bloque `try/catch` para capturar y manejar los errores de manera más eficiente.
