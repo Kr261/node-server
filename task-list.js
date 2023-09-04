@@ -35,14 +35,18 @@ const server = http.createServer((req, res) => {
   }
 });
 
-// main()
-//   .then(() => {
-//     console.log("Program completed successfully.");
-//   })
-//   .catch((error) => {
-//     console.log("program error:", error);
-//   });
+const server = http.createServer((req, res) => {
+    if (req.url === "/tasks" && req.method === "GET") {
+      res.setHeader("Content-Type", "application/json");
+      res.statusCode = 200;
+      res.end(JSON.stringify(taskList));
+    } else {
+      res.statusCode = 404;
+      res.end();
+    }
+  });
+  
+  server.listen(port, host, () => {
+    console.log("Server running on: ", host, port);
+  });
 
-server.listen(port, host, () => {
-  console.log("Server running on: ", host, port);
-});
