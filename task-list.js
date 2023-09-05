@@ -25,17 +25,6 @@ const taskList = [
 ];
 
 const server = http.createServer((req, res) => {
-  if (req.url === "/tasks" && req.method === "GET") {
-    res.setHeader("Content-Type", "application/json");
-    res.statusCode = 200;
-    res.end(JSON.stringify(taskList));
-  } else {
-    res.statusCode = 404;
-    res.end();
-  }
-});
-
-const server = http.createServer((req, res) => {
     if (req.url === "/tasks" && req.method === "GET") {
       res.setHeader("Content-Type", "application/json");
       res.statusCode = 200;
